@@ -1,11 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://cw646wgyyydlr"]
+[gd_scene load_steps=9 format=3 uid="uid://cw646wgyyydlr"]
 
 [ext_resource type="Script" uid="uid://5fpy3njhvrpm" path="res://Scripts/Player.cs" id="1_bo1nx"]
 [ext_resource type="Texture2D" uid="uid://p14h3jkb5jaw" path="res://icon.svg" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://ch2ig1nry0c4c" path="res://Scenes/kill_zone.tscn" id="3_8gbba"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jjgbg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jjvhh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jjvhh"]
+radius = 27.0
+
+[sub_resource type="Gradient" id="Gradient_8gbba"]
+offsets = PackedFloat32Array(0.506494, 0.967532)
+colors = PackedColorArray(0.776782, 0.127987, 0, 1, 0.709027, 0, 0.122471, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jjvhh"]
+gradient = SubResource("Gradient_8gbba")
+fill = 1
+fill_from = Vector2(0.504587, 0.490826)
+fill_to = Vector2(0.825688, 0.862385)
 
 [node name="Main" type="Node2D"]
 
@@ -49,3 +63,16 @@ shape = SubResource("CapsuleShape2D_jjvhh")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.77, 1.77)
+
+[node name="KillZone" parent="." instance=ExtResource("3_8gbba")]
+position = Vector2(502, 588)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+shape = SubResource("CircleShape2D_jjvhh")
+
+[node name="TextureRect" type="TextureRect" parent="KillZone"]
+offset_left = -32.0
+offset_top = -31.0
+offset_right = 32.0
+offset_bottom = 33.0
+texture = SubResource("GradientTexture2D_jjvhh")
