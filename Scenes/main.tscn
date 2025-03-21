@@ -13,7 +13,28 @@
 position = Vector2(667, 502)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-49, 131)
 shape = SubResource("WorldBoundaryShape2D_jjgbg")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(130, 71)
+texture = ExtResource("2_8gbba")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(638, 319)
+texture = ExtResource("2_8gbba")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+position = Vector2(945, 59)
+texture = ExtResource("2_8gbba")
+
+[node name="Icon4" type="Sprite2D" parent="."]
+position = Vector2(847, 554)
+texture = ExtResource("2_8gbba")
+
+[node name="Icon5" type="Sprite2D" parent="."]
+position = Vector2(387, 526)
+texture = ExtResource("2_8gbba")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(631, 155)
@@ -25,3 +46,6 @@ texture = ExtResource("2_8gbba")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("CapsuleShape2D_jjvhh")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(1.77, 1.77)
