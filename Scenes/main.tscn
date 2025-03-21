@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://5fpy3njhvrpm" path="res://Scripts/Player.cs" id="1_bo1nx"]
 [ext_resource type="Texture2D" uid="uid://p14h3jkb5jaw" path="res://icon.svg" id="2_8gbba"]
-[ext_resource type="PackedScene" uid="uid://ch2ig1nry0c4c" path="res://Scenes/kill_zone.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" path="res://Scenes/kill_zone.tscn" id="3_8gbba"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jjgbg"]
 
