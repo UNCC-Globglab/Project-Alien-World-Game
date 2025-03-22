@@ -5,7 +5,7 @@ public partial class Player : CharacterBody2D
     // Some of these numbers are big because F = ma
     private float MovementAcceleration = 1000;
     private float Gravity = (float)ProjectSettings.GetSetting("physics/2d/default_gravity");
-    private float JumpVelocity = -275;
+    private float JumpVelocity = -300;
     private float DragCoefficient = .0043f;
     private float Mass = 84;
     private float FrictionCoefficient = 2f;
@@ -70,7 +70,7 @@ public partial class Player : CharacterBody2D
 
     private float CalculateVerticalSpeed(float force, double delta)
     {
-        if (Input.IsActionPressed("up") && IsOnFloor())
+        if (Input.IsActionJustPressed("up") && IsOnFloor())
         {
             return JumpVelocity;
         }
